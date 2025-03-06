@@ -106,11 +106,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Install and setup GRUB:
 <pre>
-  $ efibootmgr -u
-  <i>[if you don't see any boot devices after running the command above, type the command below]</i>
-  $ grub-install --target=x86_64-efi --efi-directory=/boot/efi --removable
-  <i>[if the command "efibootmgr -u" showed boot devices, type the command below]</i>
-  $ grub-install /dev/nvme0n1
+  $ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
   $ grub-mkconfig -o /boot/grub/grub.cfg
 </pre>
 
