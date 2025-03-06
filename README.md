@@ -259,3 +259,28 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ usermod -a -G uucp $USER
   $ reboot
 </pre>
+
+### How to use nmcli:
+<pre>
+  $ nmcli device wifi list
+  $ nmcli device wifi connect &lt;Network's name&gt; password &lt;Network's password&gt;
+  $ nmcli device status
+  $ nmcli connection down &lt;Network's name&gt;
+  $ nmcli connection show
+</pre>
+
+### How to use bluetoothctl:
+<pre>
+  $ bluetoothctl
+  [bluetooth]# power on
+  [bluetooth]# discoverable on
+  [bluetooth]# pairable on
+  [bluetooth]# scan on
+  [bluetooth]# pair XX:XX:XX:XX:XX:XX
+  [bluetooth]# trust XX:XX:XX:XX:XX:XX
+  [bluetooth]# connect XX:XX:XX:XX:XX:XX
+  [bluetooth]# info XX:XX:XX:XX:XX:XX
+  [bluetooth]# disconnect XX:XX:XX:XX:XX:XX
+  [bluetooth]# remove XX:XX:XX:XX:XX:XX
+  [bluetooth]# devices
+</pre>
