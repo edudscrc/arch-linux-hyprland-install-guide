@@ -216,6 +216,14 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ reboot
 </pre>
 
+### Enable Wayland support on Google Chrome:
+<pre>
+  <i>[In Google Chrome's address bar, type the following command]</i>
+  chrome://flags/
+
+  <b>Search for the flag "Preferred Ozone platform" and set it to "Wayland"</b>
+</pre>
+
 ### Install HDR utilities and how to use it:
 <pre>
   $ sudo pacman -S gamescope
