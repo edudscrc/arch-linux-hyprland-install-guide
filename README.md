@@ -173,7 +173,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Install Hyprland and some useful packages:
 <pre>
-  $ sudo pacman -S hyprland kitty
+  $ sudo pacman -S hyprland kitty uwsm
   $ sudo pacman -S xdg-desktop-portal-hyprland
   $ sudo pacman -S dbus hyprpolkitagent
   $ sudo pacman -S qt5-wayland qt6-wayland
