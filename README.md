@@ -250,7 +250,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
   On chrome://flags, set these values:
   Preferred Ozone platform - Wayland
-  Wayland text-input-v3 - Enabled
+  $ google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
 </pre>
 
 ### Add permission to serial ports:
