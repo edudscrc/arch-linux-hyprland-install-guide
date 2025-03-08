@@ -160,6 +160,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S git btop wget fd curl unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject pyenv
+  $ sudo pacman -S ripgrep fuse2
 </pre>
 
 ### Install yay:
@@ -178,9 +179,10 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S dbus hyprpolkitagent
   $ sudo pacman -S qt5-wayland qt6-wayland
   $ sudo pacman -S waybar hyprpaper
-  $ sudo pacman -S thunar mpv rofi
+  $ sudo pacman -S thunar mpv rofi dunst
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
   $ yay -S qimgv-git wlogout hyprshot
+  $ yay -S xwaylandvideobridge
 </pre>
 
 ### Install necessary fonts:
@@ -260,21 +262,41 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ reboot
 </pre>
 
+### How to change DNS with NetworkManager:
+<pre>
+  $ sudo nano /etc/NetworkManager/conf.d/dns.conf
+  <i>[Add the following content]</i>
+  [main]
+  dns=none
+
+  $ nmcli connection modify "Wired connection 1" ipv4.dns "1.1.1.1, 1.0.0.1"
+  $ nmcli connection modify "Wired connection 1" ipv6.dns "2606:4700:4700::1111, 2606:4700:4700::1001"
+
+  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv4.dns "1.1.1.1, 1.0.0.1"
+  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv6.dns "2606:4700:4700::1111, 2606:4700:4700::1001"
+
+  $ nmcli connection modify "Wired connection 1" ipv4.ignore-auto-dns yes
+  $ nmcli connection modify "Wired connection 1" ipv6.ignore-auto-dns yes
+  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv4.ignore-auto-dns yes
+  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv6.ignore-auto-dns yes
+
+  $ sudo systemctl restart NetworkManager
+</pre>
+
 ### How to use nmcli:
 <pre>
   $ nmcli device wifi list
-  $ nmcli device wifi connect &lt;Network's name&gt; password &lt;Network's password&gt;
-  $ nmcli device status
-  $ nmcli connection down &lt;Network's name&gt;
+  $ nmcli device wifi connect &lt;SSID_or_BSSID&gt; password &lt;Network's password&gt;
   $ nmcli connection show
+  $ nmcli connection delete &lt;Network's name&gt;
+  $ nmcli connection up &lt;Network's name&gt;
+  $ nmcli device
 </pre>
 
 ### How to use bluetoothctl:
 <pre>
   $ bluetoothctl
   [bluetooth]# power on
-  [bluetooth]# discoverable on
-  [bluetooth]# pairable on
   [bluetooth]# scan on
   [bluetooth]# pair XX:XX:XX:XX:XX:XX
   [bluetooth]# trust XX:XX:XX:XX:XX:XX
