@@ -248,12 +248,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[Add it to exec-once on hyprland.conf]</i>
   exec-once = fcitx5
 
-  <i>[To fix cedilla on Google Chrome, run it with the following parameter]</i>
-  $ google-chrome-stable --enable-wayland-ime
-
-  <i>[To make it permanent]</i>
-  $ sudo nano /usr/share/applications/google-chrome.desktop
-  Exec=/usr/bin/google-chrome-stable --enable-wayland-ime %U
+  On chrome://flags, set these values:
+  Preferred Ozone platform - Wayland
+  Wayland text-input-v3 - Enabled
 </pre>
 
 ### Add permission to serial ports:
