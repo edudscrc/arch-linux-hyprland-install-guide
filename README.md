@@ -161,6 +161,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep fuse2
+  curl -fsSL https://pyenv.run | bash
 </pre>
 
 ### Install yay:
@@ -176,13 +177,12 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo pacman -S hyprland kitty uwsm
   $ sudo pacman -S xdg-desktop-portal-hyprland
-  $ sudo pacman -S dbus hyprpolkitagent
+  $ sudo pacman -S dunst hyprpolkitagent
   $ sudo pacman -S qt5-wayland qt6-wayland
   $ sudo pacman -S waybar hyprpaper
-  $ sudo pacman -S thunar mpv rofi dunst
+  $ sudo pacman -S thunar mpv rofi
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
   $ yay -S qimgv-git wlogout hyprshot
-  $ yay -S xwaylandvideobridge
 </pre>
 
 ### Install necessary fonts:
@@ -196,7 +196,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 ### Install sound drivers and sound support:
 <pre>
   $ sudo pacman -S pipewire wireplumber pipewire-audio
-  $ sudo pacman -S pipewire-alsa pipewire-pulse pipewire-jack
+  $ sudo pacman -S pipewire-alsa pipewire-pulse
   $ sudo pacman -S lib32-pipewire pavucontrol
 </pre>
 
