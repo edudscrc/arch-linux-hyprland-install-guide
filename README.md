@@ -16,11 +16,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ ping archlinux.org
 </pre>
 
-### Synchronize packages:
-<pre>
-  $ pacman -Syy
-</pre>
-
 ### Disk partitioning (using fdisk):
 <pre>
   $ fdisk /dev/nvme0n1
@@ -91,7 +86,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
       <i>127.0.0.1 localhost</i>
       <i>::1 localhost</i>
       <i>127.0.1.1 yourhostname</i>
-  $ useradd -m -G wheel,storage,power,audio,video -s /bin/bash yourusername
+  $ useradd -m -G wheel,storage,power,audio,video,uucp -s /bin/bash yourusername
   $ passwd root
   $ passwd yourusername
   $ EDITOR=nano visudo
@@ -160,7 +155,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S git btop wget fd curl unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
-  $ sudo pacman -S ripgrep fuse2
+  $ sudo pacman -S ripgrep fuse2 fcitx5
+  $ sudo pacman -S gamescope
+  $ yay -S vk-hdr-layer-kwin6-git
   curl -fsSL https://pyenv.run | bash
 </pre>
 
