@@ -258,23 +258,24 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### How to change DNS with NetworkManager:
 <pre>
-  $ sudo nano /etc/NetworkManager/conf.d/dns.conf
-  <i>[Add the following content]</i>
-  [main]
-  dns=none
+  <i>[List your connections with the command below]</i>
+  $ nmcli connection
 
-  $ nmcli connection modify "Wired connection 1" ipv4.dns "1.1.1.1, 1.0.0.1"
-  $ nmcli connection modify "Wired connection 1" ipv6.dns "2606:4700:4700::1111, 2606:4700:4700::1001"
+  $ nmcli connection edit Wired\ connection\ 1
+  nmcli> set ipv4.ignore-auto-dns yes
+  nmcli> set ipv4.dns 1.1.1.1
+  nmcli> set ipv4.dns 1.0.0.1
+  nmcli> set ipv6.ignore-auto-dns yes
+  nmcli> set ipv6.dns 2606:4700:4700::1111
+  nmcli> set ipv6.dns 2606:4700:4700::1001
 
-  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv4.dns "1.1.1.1, 1.0.0.1"
-  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv6.dns "2606:4700:4700::1111, 2606:4700:4700::1001"
-
-  $ nmcli connection modify "Wired connection 1" ipv4.ignore-auto-dns yes
-  $ nmcli connection modify "Wired connection 1" ipv6.ignore-auto-dns yes
-  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv4.ignore-auto-dns yes
-  $ nmcli connection modify &lt;YOUR_SSID&gt; ipv6.ignore-auto-dns yes
+  nmcli> save persistent
+  nmcli> quit
 
   $ sudo systemctl restart NetworkManager
+
+  <i>[You can check if the settings were applied]</i>
+  $ cat /etc/resolv.conf
 </pre>
 
 ### How to use nmcli:
