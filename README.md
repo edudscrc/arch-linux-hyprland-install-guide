@@ -155,9 +155,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S git btop wget fd curl unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
-  $ sudo pacman -S ripgrep fuse2 fcitx5
-  $ sudo pacman -S gamescope
-  $ yay -S vk-hdr-layer-kwin6-git
+  $ sudo pacman -S ripgrep gamescope fuse2
   curl -fsSL https://pyenv.run | bash
 </pre>
 
@@ -180,6 +178,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S thunar mpv rofi
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
   $ yay -S qimgv-git wlogout hyprshot
+  $ yay -S vk-hdr-layer-kwin6-git
 </pre>
 
 ### Install necessary fonts:
@@ -216,38 +215,31 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ reboot
 </pre>
 
-### Enable Wayland support on Google Chrome:
-<pre>
-  <i>[In Google Chrome's address bar, type the following command]</i>
-  chrome://flags/
-
-  <b>Search for the flag "Preferred Ozone platform" and set it to "Wayland"</b>
-</pre>
-
 ### Install HDR utilities and how to use it:
 <pre>
   $ sudo pacman -S gamescope
   $ yay -S vk-hdr-layer-kwin6-git
+
+  <i>[Add the following environment variable]</i>
+  ENABLE_HDR_WSI=1
   
   <i>[In Steam, to enable HDR for a single game, set the following Launch options]</i>
   DXVK_HDR=1 gamescope -f -W 2560 -H 1440 --force-grab-cursor --hdr-enabled -- %command%
   
   <i>[To play a video with HDR using MPV, do the following]</i>
-  <i>[1. Add the following environment variable]</i>
-  ENABLE_HDR_WSI=1
-  <i>[2. Play the video using the command below]</i>
   $ mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk "path/to/video"
 </pre>
 
 ### Fix cedilla on us-intl with dead keys:
 <pre>
-  $ sudo pacman -S fcitx5
-  <i>[Add it to exec-once on hyprland.conf]</i>
-  exec-once = fcitx5
+  $ sudo nano /usr/lib/gtk-3.0/3.0.0/immodules.cache
+  <i>[Find the lines starting with "cedilla" "Cedilla" and add :en to the line]</i>
 
-  On chrome://flags, set these values:
-  Preferred Ozone platform - Wayland
-  $ google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
+  $ sudo sed -i /usr/share/X11/locale/en_US.UTF-8/Compose -e 's/ć/ç/g' -e 's/Ć/Ç/g'
+
+  <i>[Add the following environment variables]</i>
+  GTK_IM_MODULE=cedilla
+  QT_IM_MODULE=cedilla
 </pre>
 
 ### Add permission to serial ports:
