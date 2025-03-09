@@ -61,6 +61,11 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ swapon /dev/nvme0n1p2
 </pre>
 
+### Update your mirrors to get fastest download speed on pacstrap:
+<pre>
+  $ reflector --country Brazil --protocol https --latest 5 --save /etc/pacman.d/mirrorlist --sort rate --verbose
+</pre>
+
 ### Install essential packages into new filesystem and generate fstab:
 <pre>
   <i>[install amd-ucode for AMD chipset or intel-ucode for INTEL chipset]</i>
@@ -156,6 +161,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep gamescope fuse2
+  $ sudo pacman -S reflector less sassc
   curl -fsSL https://pyenv.run | bash
 </pre>
 
@@ -193,7 +199,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo pacman -S pipewire wireplumber pipewire-audio
   $ sudo pacman -S pipewire-alsa pipewire-pulse
-  $ sudo pacman -S pipewire-jack  <i># It will ask to replace jack-2, I like to replace it.</i>
+  $ sudo pacman -S pipewire-jack  <i># If it asks to replace jack-2, replace it.</i>
   $ sudo pacman -S lib32-pipewire pavucontrol
 </pre>
 
@@ -205,9 +211,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Install additional softwares:
 <pre>
-  $ sudo pacman -S steam discord
+  $ sudo pacman -S steam discord spotify-launcher
   $ sudo pacman -S fastfetch qbittorrent
-  $ yay -S spotify visual-studio-code-bin
+  $ yay -S visual-studio-code-bin
   $ yay -S google-chrome
 </pre>
 
