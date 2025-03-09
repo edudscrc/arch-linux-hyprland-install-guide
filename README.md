@@ -193,6 +193,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo pacman -S pipewire wireplumber pipewire-audio
   $ sudo pacman -S pipewire-alsa pipewire-pulse
+  $ sudo pacman -S pipewire-jack  <i># It will ask to replace jack-2, I like to replace it.</i>
   $ sudo pacman -S lib32-pipewire pavucontrol
 </pre>
 
