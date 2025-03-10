@@ -218,6 +218,18 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ yay -S google-chrome
 </pre>
 
+### Install Vencord and Spicetify:
+<pre>
+  $ sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+  $ curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+
+  $ nano ~/.config/spicetify/config-xpui.ini
+  [Patch]
+  xpui.js_find_8008 = ,(\w+=)56,
+  xpui.js_repl_8008 = ,${1}32,
+  <i>On spotify_path, enter the absolute value instead of $HOME or ~</i>
+</pre>
+
 ### Reboot:
 <pre>
   $ reboot
