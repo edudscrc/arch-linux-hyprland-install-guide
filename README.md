@@ -230,6 +230,11 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>On spotify_path, enter the absolute value instead of $HOME or ~</i>
 </pre>
 
+### Disable the loud beep sound in TTY:
+<pre>
+  $ sudo rmmod pcspkr
+</pre>
+
 ### Reboot:
 <pre>
   $ reboot
