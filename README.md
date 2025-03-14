@@ -157,7 +157,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Install useful packages:
 <pre>
-  $ sudo pacman -S git btop wget fd curl unzip
+  $ sudo pacman -S git btop wget fd unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep gamescope fuse2
