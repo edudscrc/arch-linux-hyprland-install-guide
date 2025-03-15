@@ -219,6 +219,15 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ yay -S google-chrome
 </pre>
 
+### Reboot:
+<pre>
+  $ reboot
+</pre>
+
+<h1 align="center">
+    Troubleshooting and additional stuff
+</h1>
+
 ### Install Vencord and Spicetify:
 <pre>
   $ sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
@@ -235,15 +244,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo rmmod pcspkr
 </pre>
-
-### Reboot:
-<pre>
-  $ reboot
-</pre>
-
-<h1 align="center">
-    Troubleshooting and additional stuff
-</h1>
 
 ### Install HDR utilities and how to use it:
 <pre>
