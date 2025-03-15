@@ -160,8 +160,10 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S git btop wget fd unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
-  $ sudo pacman -S ripgrep gamescope fuse2
+  $ sudo pacman -S ripgrep fuse2
   $ sudo pacman -S reflector less sassc
+  
+  <i>To manage different Python versions:</i>
   curl -fsSL https://pyenv.run | bash
 </pre>
 
@@ -183,9 +185,8 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S waybar hyprpaper
   $ sudo pacman -S thunar mpv rofi
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
-  $ sudo pacman -S python-pywal hyprpicker
+  $ sudo pacman -S hyprpicker
   $ yay -S qimgv-git wlogout hyprshot
-  $ yay -S vk-hdr-layer-kwin6-git
 </pre>
 
 ### Install necessary fonts:
@@ -266,6 +267,11 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[Add the following environment variables]</i>
   GTK_IM_MODULE=cedilla
   QT_IM_MODULE=cedilla
+
+  <i>
+    The only way to type cedilla on Google Chrome with ozonePlatform=Wayland using ' + c would be to use fcitx5.
+    To use cedilla on Wayland, use Right Alt + ,
+  </i>
 </pre>
 
 ### Add permission to serial ports:
@@ -295,27 +301,4 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[You can check if the settings were applied]</i>
   $ cat /etc/resolv.conf
 </pre>
-
-### How to use nmcli:
-<pre>
-  $ nmcli device wifi list
-  $ nmcli device wifi connect &lt;SSID_or_BSSID&gt; password &lt;Network's password&gt;
-  $ nmcli connection show
-  $ nmcli connection delete &lt;Network's name&gt;
-  $ nmcli connection up &lt;Network's name&gt;
-  $ nmcli device
-</pre>
-
-### How to use bluetoothctl:
-<pre>
-  $ bluetoothctl
-  [bluetooth]# power on
-  [bluetooth]# scan on
-  [bluetooth]# pair XX:XX:XX:XX:XX:XX
-  [bluetooth]# trust XX:XX:XX:XX:XX:XX
-  [bluetooth]# connect XX:XX:XX:XX:XX:XX
-  [bluetooth]# info XX:XX:XX:XX:XX:XX
-  [bluetooth]# disconnect XX:XX:XX:XX:XX:XX
-  [bluetooth]# remove XX:XX:XX:XX:XX:XX
-  [bluetooth]# devices
-</pre>
+=
