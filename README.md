@@ -301,4 +301,3 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[You can check if the settings were applied]</i>
   $ cat /etc/resolv.conf
 </pre>
-=
