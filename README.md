@@ -228,6 +228,16 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
     Troubleshooting and additional stuff
 </h1>
 
+### Compile Stremio from source:
+<pre>
+  $ sudo pacman -S wget librsvg nodejs mpv openssl make gcc qt5-base qt5-webengine qt5-quickcontrols qt5-quickcontrols2 --needed
+  $ git clone --recurse-submodules https://github.com/Stremio/stremio-shell.git
+  $ qmake
+  $ make -f release.makefile
+  $ sudo make -f release.makefile install
+  $ sudo ./dist-utils/common/postinstall
+</pre>
+
 ### Install Vencord and Spicetify:
 <pre>
   $ sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
