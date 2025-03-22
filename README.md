@@ -229,6 +229,15 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
     Troubleshooting and additional stuff
 </h1>
 
+### Change icon theme to Papirus:
+<pre>
+  $ sudo pacman -S papirus-icon-theme
+  $ yay -S papirus-folders-git
+  $ papirus-folders -C violet --theme Papirus-Dark
+
+  <i>Use nwg-look to change icon theme</i>
+</pre>
+
 ### Compile Stremio from source:
 <pre>
   $ sudo pacman -S wget librsvg nodejs mpv openssl make gcc qt5-base qt5-webengine qt5-quickcontrols qt5-quickcontrols2 --needed
