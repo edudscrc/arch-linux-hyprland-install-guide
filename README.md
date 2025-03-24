@@ -275,6 +275,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   
   <i>[To play a video with HDR using MPV, do the following]</i>
   $ ENABLE_HDR_WSI=1 mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk "path/to/video"
+
+  <i>If the above doesn't work, try the command below.</i>
+  $ ENABLE_HDR_WSI=1 mpv --vo=dmabuf-wayland --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk "path/to/video"
 </pre>
 
 ### Fix cedilla on us-intl with dead keys:
