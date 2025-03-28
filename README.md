@@ -215,9 +215,8 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 ### Install additional softwares:
 <pre>
   $ sudo pacman -S steam discord spotify-launcher
-  $ sudo pacman -S fastfetch qbittorrent
+  $ sudo pacman -S fastfetch qbittorrent firefox
   $ yay -S visual-studio-code-bin
-  $ yay -S google-chrome
 </pre>
 
 ### Reboot:
