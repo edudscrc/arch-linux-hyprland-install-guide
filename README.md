@@ -324,3 +324,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[You can check if the settings were applied]</i>
   $ cat /etc/resolv.conf
 </pre>
+
+### Incorrect password (when you are sure you are typing it correctly):
+<pre>
+  $ su
+  # faillock --reset
+</pre>
