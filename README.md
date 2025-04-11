@@ -76,7 +76,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 ### Basic configuration of new system:
 <pre>
   $ arch-chroot /mnt
-  <i>[uncomment your locales, i.e. 'en_US.UTF-8' or 'pt_BR.UTF-8']</i>
+  <i>[uncomment your locale, i.e. 'en_US.UTF-8' or 'pt_BR.UTF-8']</i>
   $ nano /etc/locale.gen
   $ locale-gen
   $ echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -170,7 +170,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ cd yay
   $ makepkg -si
   $ cd ..
-  $ rm -r yay
+  $ rm -rf yay
 </pre>
 
 ### Install Hyprland and some useful packages:
@@ -213,7 +213,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo pacman -S steam discord spotify-launcher
   $ sudo pacman -S fastfetch qbittorrent firefox
-  $ sudo pacman -S obsidian
+  $ sudo pacman -S obsidian nwg-look
   $ yay -S visual-studio-code-bin
 </pre>
 
@@ -275,11 +275,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   <i>[Add the following environment variables]</i>
   GTK_IM_MODULE=cedilla
   QT_IM_MODULE=cedilla
-
-  <i>
-    The only way to type cedilla on Google Chrome with ozonePlatform=Wayland using ' + c would be to use fcitx5.
-    To use cedilla on Wayland, use Right Alt + ,
-  </i>
 </pre>
 
 ### How to change DNS with NetworkManager:
