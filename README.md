@@ -162,9 +162,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep fuse2
   $ sudo pacman -S reflector less sassc
-  
-  <i>To manage different Python versions:</i>
-  curl -fsSL https://pyenv.run | bash
 </pre>
 
 ### Install yay:
@@ -216,6 +213,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo pacman -S steam discord spotify-launcher
   $ sudo pacman -S fastfetch qbittorrent firefox
+  $ sudo pacman -S obsidian
   $ yay -S visual-studio-code-bin
 </pre>
 
@@ -245,18 +243,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ make -f release.makefile
   $ sudo make -f release.makefile install
   $ sudo ./dist-utils/common/postinstall
-</pre>
-
-### Install Vencord and Spicetify:
-<pre>
-  $ sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
-  $ curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
-
-  $ nano ~/.config/spicetify/config-xpui.ini
-  [Patch]
-  xpui.js_find_8008 = ,(\w+=)56,
-  xpui.js_repl_8008 = ,${1}32,
-  <i>On spotify_path, enter the absolute value instead of $HOME or ~</i>
 </pre>
 
 ### Disable the loud beep sound in TTY:
@@ -294,12 +280,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
     The only way to type cedilla on Google Chrome with ozonePlatform=Wayland using ' + c would be to use fcitx5.
     To use cedilla on Wayland, use Right Alt + ,
   </i>
-</pre>
-
-### Add permission to serial ports:
-<pre>
-  $ usermod -a -G uucp $USER
-  $ reboot
 </pre>
 
 ### How to change DNS with NetworkManager:
