@@ -61,7 +61,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ swapon /dev/nvme0n1p2
 </pre>
 
-### Update your mirrors to get fastest download speed on pacstrap:
+### Update your mirrors to get faster download speed on pacstrap:
 <pre>
   $ reflector --country Brazil --protocol https --latest 5 --save /etc/pacman.d/mirrorlist --sort rate --verbose
 </pre>
