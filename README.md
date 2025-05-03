@@ -183,7 +183,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S thunar mpv rofi
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
   $ sudo pacman -S hyprpicker hyprlock
-  $ yay -S qimgv-git wlogout hyprshot
+  $ yay -S qimgv-git hyprshot
   $ yay -S wl-gammarelay-rs
 </pre>
 
