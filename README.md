@@ -185,6 +185,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S hyprpicker hyprlock
   $ yay -S qimgv-git hyprshot
   $ yay -S wl-gammarelay-rs
+  $ yay -S pokeget
 </pre>
 
 ### Install necessary fonts:
