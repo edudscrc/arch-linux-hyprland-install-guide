@@ -183,9 +183,9 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S thunar mpv rofi
   $ sudo pacman -S gvfs tumbler ffmpegthumbnailer
   $ sudo pacman -S hyprpicker hyprlock
+  $ sudo pacman -S dysk
   $ yay -S qimgv-git hyprshot
   $ yay -S wl-gammarelay-rs
-  $ yay -S pokeget
 </pre>
 
 ### Install necessary fonts:
@@ -249,21 +249,6 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 ### Disable the loud beep sound in TTY:
 <pre>
   $ sudo rmmod pcspkr
-</pre>
-
-### Install HDR utilities and how to use it:
-<pre>
-  $ sudo pacman -S gamescope
-  $ yay -S vk-hdr-layer-kwin6-git
-
-  <i>[In Steam, to enable HDR for a single game, set the following Launch options]</i>
-  DXVK_HDR=1 gamescope -f -W 2560 -H 1440 --force-grab-cursor --hdr-enabled -- %command%
-  
-  <i>[To play a video with HDR using MPV, do the following]</i>
-  $ ENABLE_HDR_WSI=1 mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk "path/to/video"
-
-  <i>If the above doesn't work, try the command below.</i>
-  $ ENABLE_HDR_WSI=1 mpv --vo=dmabuf-wayland --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk "path/to/video"
 </pre>
 
 ### Fix cedilla on us-intl with dead keys:
