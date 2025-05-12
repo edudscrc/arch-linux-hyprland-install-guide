@@ -11,7 +11,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ iwctl
   [iwd]# station wlan0 get-networks
-  [iwd]# station wlan0 connect <Network's name>
+  [iwd]# station wlan0 connect YOUR_NETWORK_NAME
   [iwd]# exit
   $ ping archlinux.org
 </pre>
@@ -135,7 +135,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 <pre>
   $ sudo nano /etc/pacman.conf
   <i>[uncomment [multilib] section]</i>
-  $ sudo pacman -Sy
+  $ sudo pacman -Syyu
 </pre>
 
 ### Install GPU drivers (and packages for gaming):
