@@ -150,6 +150,11 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
 </pre>
 
+<b>INTEL</b>
+<pre>
+  $ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
+</pre>
+
 ### [Optional] Run service that will discard unused blocks on mounted filesystems. This is useful for SSDs and thinly-provisioned storage:
 <pre>
   $ sudo systemctl enable fstrim.timer
