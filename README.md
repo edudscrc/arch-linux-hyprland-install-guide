@@ -201,8 +201,8 @@
 <pre>
   $ sudo pacman -S noto-fonts noto-fonts-emoji
   $ sudo pacman -S noto-fonts-cjk ttf-liberation
-  $ sudo pacman -S ttf-font-awesome
-  $ sudo pacman -S ttf-monaspace-variable otf-monaspace-nerd
+  $ sudo pacman -S otf-font-awesome
+  $ sudo pacman -S otf-monaspace otf-monaspace-nerd
 </pre>
 
 ### Install sound drivers and sound support:
