@@ -80,15 +80,13 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Basic configuration of new system:
 <pre>
-  # arch-chroot /mnt
-  # ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-  # hwclock --systohc
+  $ arch-chroot /mnt
+  $ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+  $ hwclock --systohc
   <i>[uncomment your locales, i.e. 'en_US.UTF-8' or 'pt_BR.UTF-8']</i>
-  # nano /etc/locale.gen
-  # locale-gen
-  # echo "LANG=en_US.UTF-8" > /etc/locale.conf
-  
-  
+  $ nano /etc/locale.gen
+  $ locale-gen
+  $ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 </pre>
 
 ### Setup hostname and usernames:
