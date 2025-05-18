@@ -63,7 +63,7 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 
 ### Update your mirrors to get faster download speed on pacstrap:
 <pre>
-  $ reflector --country Brazil --protocol https --latest 5 --save /etc/pacman.d/mirrorlist --sort rate --verbose
+  $ reflector --country Brazil --latest 5 --save /etc/pacman.d/mirrorlist --sort rate --verbose
 </pre>
 
 ### Install essential packages into new filesystem and generate fstab:
