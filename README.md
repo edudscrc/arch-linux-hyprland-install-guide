@@ -16,6 +16,11 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
   $ ping archlinux.org
 </pre>
 
+### Synchronize the system clock:
+<pre>
+  $ timedatectl
+</pre>
+
 ### Disk partitioning (using fdisk):
 <pre>
   $ fdisk /dev/nvme0n1
@@ -69,19 +74,21 @@ Learn how to install Arch Linux with Hyprland. Minimal installation.
 ### Install essential packages into new filesystem and generate fstab:
 <pre>
   <i>[install amd-ucode for AMD chipset or intel-ucode for INTEL chipset]</i>
-  $ pacstrap /mnt base linux linux-firmware amd-ucode base-devel grub efibootmgr nano networkmanager
-  $ genfstab -U /mnt > /mnt/etc/fstab
+  $ pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel grub efibootmgr nano networkmanager
+  $ genfstab -U /mnt >> /mnt/etc/fstab
 </pre>
 
 ### Basic configuration of new system:
 <pre>
-  $ arch-chroot /mnt
-  <i>[uncomment your locale, i.e. 'en_US.UTF-8' or 'pt_BR.UTF-8']</i>
-  $ nano /etc/locale.gen
-  $ locale-gen
-  $ echo "LANG=en_US.UTF-8" > /etc/locale.conf
-  $ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-  $ hwclock --systohc
+  # arch-chroot /mnt
+  # ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+  # hwclock --systohc
+  <i>[uncomment your locales, i.e. 'en_US.UTF-8' or 'pt_BR.UTF-8']</i>
+  # nano /etc/locale.gen
+  # locale-gen
+  # echo "LANG=en_US.UTF-8" > /etc/locale.conf
+  
+  
 </pre>
 
 ### Setup hostname and usernames:
