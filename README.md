@@ -229,16 +229,16 @@
   $ sudo pacman -S waybar hyprpaper
   $ sudo pacman -S yazi mpv rofi
   $ sudo pacman -S hyprpicker hyprlock
-  $ sudo pacman -S dysk
+  $ sudo pacman -S thunar tumbler gvfs ffmpeg-thumbnailer
   $ yay -S qimgv-git hyprshot
   $ yay -S wl-gammarelay-rs
   $ sudo systemctl enable ly.service
 </pre>
 
-### Install additional softwares:
+### [Optional] Install additional softwares:
 <pre>
   $ sudo pacman -S steam discord spotify-launcher
-  $ sudo pacman -S fastfetch qbittorrent firefox
+  $ sudo pacman -S qbittorrent firefox
   $ sudo pacman -S obsidian neovim zathura
   $ sudo pacman -S zathura-pdf-poppler
   $ yay -S visual-studio-code-bin
