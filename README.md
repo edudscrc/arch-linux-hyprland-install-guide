@@ -185,7 +185,7 @@
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep fuse2
-  $ sudo pacman -S reflector less sassc
+  $ sudo pacman -S reflector
 </pre>
 
 ### Install yay:
@@ -227,7 +227,7 @@
   $ sudo pacman -S dunst hyprpolkitagent
   $ sudo pacman -S qt5-wayland qt6-wayland
   $ sudo pacman -S waybar hyprpaper
-  $ sudo pacman -S yazi mpv rofi
+  $ sudo pacman -S yazi mpv rofi-wayland
   $ sudo pacman -S hyprpicker hyprlock
   $ sudo pacman -S thunar tumbler gvfs ffmpegthumbnailer
   $ yay -S qimgv-git hyprshot
