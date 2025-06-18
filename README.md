@@ -184,8 +184,8 @@
   $ sudo pacman -S git btop wget fd unzip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
-  $ sudo pacman -S ripgrep fuse2
-  $ sudo pacman -S reflector
+  $ sudo pacman -S ripgrep fuse2 cmake
+  $ sudo pacman -S reflector sassc
 </pre>
 
 ### Install yay:
