@@ -67,8 +67,8 @@
 ### Mount all filesystems to /mnt:
 <pre>
   # mount /dev/<i>YOUR_DISK_PARTITION_3</i> /mnt
-  # mkdir -p /mnt/boot/efi
-  # mount /dev/<i>YOUR_DISK_PARTITION_1</i> /mnt/boot/efi
+  # mkdir -p /mnt/boot
+  # mount /dev/<i>YOUR_DISK_PARTITION_1</i> /mnt/boot
   # swapon /dev/<i>YOUR_DISK_PARTITION_2</i>
 </pre>
 
@@ -80,7 +80,7 @@
 ### Install essential packages into new filesystem and generate fstab:
 <pre>
   <i>[Install <b>amd-ucode</b> for AMD chipset or <b>intel-ucode</b> for INTEL chipset]</i>
-  # pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel grub efibootmgr nano networkmanager
+  # pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel efibootmgr nano networkmanager
   # genfstab -U /mnt >> /mnt/etc/fstab
 </pre>
 
@@ -116,10 +116,10 @@
   # systemctl enable NetworkManager
 </pre>
 
-### Install and setup GRUB:
+### Setup EFI Boot Stub:
 <pre>
-  # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
-  # grub-mkconfig -o /boot/grub/grub.cfg
+  # blkid -s UUID -o value /dev/nvme0n1p3
+  # efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=UUID=YOUR_ROOT_PARTITION_UUID rw initrd=\initramfs-linux.img' --verbose
 </pre>
 
 ### Exit chroot, unmount all disks and reboot:
@@ -185,7 +185,7 @@
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep fuse2 cmake
-  $ sudo pacman -S reflector sassc
+  $ sudo pacman -S reflector sassc zip
 </pre>
 
 ### Install yay:
