@@ -188,11 +188,11 @@
 
 ### Install useful packages:
 <pre>
-  $ sudo pacman -S git btop wget fd unzip
+  $ sudo pacman -S git btop wget fd unzip zip
   $ sudo pacman -S bash-completion openssh eza
   $ sudo pacman -S python python-gobject
   $ sudo pacman -S ripgrep fuse2 cmake
-  $ sudo pacman -S reflector sassc zip
+  $ sudo pacman -S reflector sassc
 </pre>
 
 ### Install yay:
@@ -249,6 +249,7 @@
   $ sudo pacman -S obsidian neovim zathura
   $ sudo pacman -S zathura-pdf-poppler
   $ sudo pacman -S kdenlive audacity
+  $ sudo pacman -S nwg-look
   $ yay -S visual-studio-code-bin
 </pre>
 
@@ -264,7 +265,7 @@
 <pre>
   $ sudo pacman -S papirus-icon-theme
   $ yay -S papirus-folders-git
-  $ papirus-folders -C violet --theme Papirus-Dark
+  $ papirus-folders -C green --theme Papirus-Dark
 
   <i>Use nwg-look to change icon theme</i>
 </pre>
@@ -282,18 +283,6 @@
 ### Disable the loud beep sound in TTY:
 <pre>
   $ sudo rmmod pcspkr
-</pre>
-
-### Fix cedilla on us-intl with dead keys:
-<pre>
-  $ sudo nano /usr/lib/gtk-3.0/3.0.0/immodules.cache
-  <i>[Find the lines starting with "cedilla" "Cedilla" and add :en to the line]</i>
-
-  $ sudo sed -i /usr/share/X11/locale/en_US.UTF-8/Compose -e 's/ć/ç/g' -e 's/Ć/Ç/g'
-
-  <i>[Add the following environment variables]</i>
-  GTK_IM_MODULE=cedilla
-  QT_IM_MODULE=cedilla
 </pre>
 
 ### How to change DNS with NetworkManager:
