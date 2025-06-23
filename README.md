@@ -105,7 +105,7 @@
       <i>127.0.0.1 localhost</i>
       <i>::1 localhost</i>
       <i>127.0.1.1 <i>YOUR_HOSTNAME</i></i>
-  # useradd -m -G wheel,storage,power,audio,video,uucp -s /bin/bash <i>YOUR_USERNAME</i>
+  # useradd -m -G wheel,uucp -s /bin/bash <i>YOUR_USERNAME</i>
   # passwd root
   # passwd <i>YOUR_USERNAME</i>
   # EDITOR=nano visudo
