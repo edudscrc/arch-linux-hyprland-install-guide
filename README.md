@@ -11,6 +11,7 @@
 <pre>
   # iwctl
   [iwd]# device list
+  [iwd]# adapter phy0 set-property Powered on
   [iwd]# station <i>DEVICE_NAME</i> get-networks
   [iwd]# station <i>DEVICE_NAME</i> connect <i>YOUR_NETWORK_NAME</i>
   [iwd]# exit
